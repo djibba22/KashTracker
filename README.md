@@ -7,9 +7,13 @@ KashTracker Source Code
 
 **Table of Contents:** 
 [Installation](#installation)
+
 [Usage](#usage)
+
 [Contributing](#contributing)
+
 [Credits](#credits)
+
 [License](#license)
 
 (#installation) **Installation:** 
