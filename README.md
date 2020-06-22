@@ -16,17 +16,17 @@ KashTracker Source Code
 
 [License](#license)
 
-(#installation) **Installation:** 
+<a name="installation"></a> **Installation:** 
 Installation is the next section in an effective README. Tell other users how to install your project locally. Optionally, include a gif to make the process even more clear for other people.
 
-(#usage)**Usage:** 
+<a name="usage"></a>**Usage:** 
 The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
 
-(#contributing)**Contributing:**  
+<a name="contributing"></a>**Contributing:**  
 Check out the guide for repository contributors.
 
-(#credits)**Credits:** 
+<a name="credits"></a>**Credits:** 
 John Wayne Dinsmore
 
-(#License)**License:** 
+<a name="license"></a>**License:** 
 
