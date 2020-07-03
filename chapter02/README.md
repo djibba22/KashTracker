@@ -1,8 +1,17 @@
-#Part 1
-##REACT && Express w/ REACT ROUTER
- One of the first things we all want. A lot of developers want to tie react to express.The famous Full Stack . We need a front end on our application and we also need the API or node server on the back end ready to take requests for data.
+# Part 2
+## React ROUTER
+ Now we are going to add pages to the application. As We add pages we are going to want to set up the cient side routing and give our pages layout and basic styling.
 
- ##To run the project 
+ ## To run the project
+
+
+ #### First install node modules in both places
+
+  ``` 
+  npm run install 
  ``` 
-   cd api && npm run dev 
+ #### Then start the development servers
+
+ ``` 
+  npm start 
  ```
