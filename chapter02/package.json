@@ -1,0 +1,26 @@
+{
+  "name": "kashtracker",
+  "version": "1.0.0",
+  "description": "the small business companion",
+  "main": "./api/app.js",
+  "scripts": {
+    "start":"cd api && npm run dev",
+    "install": "cd api && npm i && cd ../client && npm i",
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djibba22/KashTracker.git"
+  },
+  "keywords": [
+    "react",
+    "react-router",
+    "redux"
+  ],
+  "author": "John Dinsmore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djibba22/KashTracker/issues"
+  },
+  "homepage": "https://github.com/djibba22/KashTracker#readme"
+}
