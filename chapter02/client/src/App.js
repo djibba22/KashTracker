@@ -1,24 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import './App.css';
 
 function App() {
-  const [response, setResponse] = useState("Before the call");
-  useEffect(() => {
-    fetch("http://localhost:8888")
-        .then(res => res.text())
-        .then(res => {
-          setResponse(res)
-    });
-  });
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="App-intro">{response}</p>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/how-it-works">How It Works</Link>
+          </li>
+        </ul>
+        <Switch>
+          <Route path="/how-it-works">
+            <About />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
