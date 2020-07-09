@@ -4,7 +4,7 @@
   "description": "the small business companion",
   "main": "./api/app.js",
   "scripts": {
-    "start":"cd api && npm run dev",
+    "start": "cd api && npm run dev",
     "install": "cd api && npm i && cd ../client && npm i",
     "test": "npm run test"
   },
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/djibba22/KashTracker/issues"
   },
-  "homepage": "https://github.com/djibba22/KashTracker#readme"
+  "homepage": "https://github.com/djibba22/KashTracker#readme",
+  "dependencies": {
+    "react-router-dom": "^5.2.0"
+  }
 }
