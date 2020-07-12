@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   toolbarLink: {
     padding: theme.spacing(1),
     flexShrink: 0,
-  },
+  }
 }));
 
 export default function Header(props) {
@@ -36,7 +36,7 @@ export default function Header(props) {
           <Link
             color="inherit"
             noWrap
-            key={section.title}
+            key={title}
             variant="body2"
             href={section.url}
             className={classes.toolbarLink}

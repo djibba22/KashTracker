@@ -19,20 +19,11 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import Grid from '@material-ui/core/Grid';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import Header from './components/Header';
-import MainFeaturedPost from './components/MainFeaturedPost';
-import FeaturedPost from './components/FeaturedPost';
-import Main from './components/Main';
-import Sidebar from './components/Sidebar';
-import Footer from './components/Footer';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
+import './App.css';
 import 'fontsource-roboto';
 import {
   BrowserRouter as Router,
@@ -40,11 +31,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
-import './App.css';
-import post1 from './blog-post.1.md';
-import post2 from './blog-post.2.md';
-import post3 from './blog-post.3.md';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,12 +51,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 function App() {
-
   const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [value, setValue] = React.useState(0);
   const open = Boolean(anchorEl);
 
   const handleChange = (event) => {
@@ -85,31 +70,23 @@ function App() {
     setAnchorEl(null);
   };
 
-  const handleClick = () => {
-    //Todo Make this thing do something
-  };
-  const [value, setValue] = React.useState(0);
-
   return (
     <>
       <CssBaseline />
       <Router>
         {/* the temporary switch */}
-        <FormGroup>
+        {/* <FormGroup>
           <FormControlLabel
             control={<Switcher checked={auth} onChange={handleChange} aria-label="login switch" />}
             label={auth ? 'Logout' : 'Login'}
           />
-        </FormGroup>
-        {/* this is the top bar to be included on every page */}
+        </FormGroup> */}
         <AppBar position="static">
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              <a href="/" style={{textDecoration:"none"}}>KashTracker</a>
-          </Typography>
+           
             {auth && (
               <div>
                 <IconButton
@@ -143,7 +120,6 @@ function App() {
             )}
           </Toolbar>
         </AppBar>
-        {  /* ToDo  put the menu bar */}
         <Container maxWidth="lg">
           <Switch>
             <Route path="/about">
@@ -159,7 +135,6 @@ function App() {
               <Home />
             </Route>
           </Switch>
-
         </Container>
         <BottomNavigation
           value={value}

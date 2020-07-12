@@ -50,7 +50,7 @@ export default function MainFeaturedPost(props) {
             <Typography variant="h5" color="inherit" paragraph>
               {post.description}
             </Typography>
-            <Button variant="outlined" size="large" href="./signin">
+            <Button variant="outlined" size="large" color="primary" href="./signin">
               Sign up Free
             </Button>
           </div>
