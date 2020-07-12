@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function FeaturedPost(props) {
+export default function Featured(props) {
   const classes = useStyles();
   const { post } = props;
 
@@ -54,6 +54,6 @@ export default function FeaturedPost(props) {
   );
 }
 
-FeaturedPost.propTypes = {
+Featured.propTypes = {
   post: PropTypes.object,
 };

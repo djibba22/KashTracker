@@ -3,12 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import {Container, Typography} from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
+// import GitHubIcon from '@material-ui/icons/GitHub';
+// import FacebookIcon from '@material-ui/icons/Facebook';
+// import TwitterIcon from '@material-ui/icons/Twitter';
 import Header from '../../components/Header';
-import MainFeaturedPost from '../../components/MainFeaturedPost';
-import FeaturedPost from '../../components/FeaturedPost';
+import MainFeatured from '../../components/MainFeatured';
+import Featured from '../../components/Featured';
 import Main from '../../components/Main';
 import 'fontsource-roboto';
 
@@ -99,10 +99,10 @@ function Home() {
       <main>
         <Header title="Blog" sections={sections} />
         <Main/>
-        <MainFeaturedPost post={mainFeaturedPost} />
+        <MainFeatured post={mainFeaturedPost} />
         <Grid container spacing={4}>
           {featuredPosts.map((post) => (
-            <FeaturedPost key={post.title} post={post} />
+            <Featured key={post.title} post={post} />
           ))}
         </Grid>
       </main>
