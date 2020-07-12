@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import Container from '@material-ui/core/Container';
+import {Container, Typography} from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -10,11 +10,17 @@ import Header from '../../components/Header';
 import MainFeaturedPost from '../../components/MainFeaturedPost';
 import FeaturedPost from '../../components/FeaturedPost';
 import Main from '../../components/Main';
-import Sidebar from '../../components/Sidebar';
 import 'fontsource-roboto';
-import post1 from '../../blog-post.1.md';
-import post2 from '../../blog-post.2.md';
-import post3 from '../../blog-post.3.md';
+
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © KashTracker 2020'}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 function Home() {
 
@@ -34,6 +40,14 @@ function Home() {
     },
     mainGrid: {
       marginTop: theme.spacing(3),
+    },
+    footer: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(6),
+    },
+    heroContent: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(8, 0, 6),
     },
   }));
 
@@ -74,59 +88,33 @@ function Home() {
       title: 'Simple and free to set up',
       date: 'Nov 11',
       description:
-        'It’s free and easy to get started, and we connect to almost every US financial institution connected to the internet. In just minutes, you’ll see where your money is going and get ideas on how to stretch it farther.',
+        'It’s free and easy to get started, and we connect to almost every US financial institution connected to the internet.',
       image: 'https://source.unsplash.com/random',
       imageText: 'Image Text',
     },
   ];
 
-  const posts = [post1, post2, post3];
-
-  const sidebar = {
-    title: 'About',
-    description:
-      'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
-    archives: [
-      { title: 'March 2020', url: '#' },
-      { title: 'February 2020', url: '#' },
-      { title: 'January 2020', url: '#' },
-      { title: 'November 1999', url: '#' },
-      { title: 'October 1999', url: '#' },
-      { title: 'September 1999', url: '#' },
-      { title: 'August 1999', url: '#' },
-      { title: 'July 1999', url: '#' },
-      { title: 'June 1999', url: '#' },
-      { title: 'May 1999', url: '#' },
-      { title: 'April 1999', url: '#' },
-    ],
-    social: [
-      { name: 'GitHub', icon: GitHubIcon },
-      { name: 'Twitter', icon: TwitterIcon },
-      { name: 'Facebook', icon: FacebookIcon },
-    ],
-  };
-
   return (
     <Container maxWidth="lg">
       <main>
         <Header title="Blog" sections={sections} />
+        <Main/>
         <MainFeaturedPost post={mainFeaturedPost} />
         <Grid container spacing={4}>
           {featuredPosts.map((post) => (
             <FeaturedPost key={post.title} post={post} />
           ))}
         </Grid>
-        <Grid container spacing={5} className={classes.mainGrid}>
-          <Main title="From the firehose" posts={posts} />
-          <Sidebar
-            title={sidebar.title}
-            description={sidebar.description}
-            archives={sidebar.archives}
-            social={sidebar.social}
-            key={sidebar.title}
-          />
-        </Grid>
       </main>
+      <footer className={classes.footer}>
+        <Typography variant="h6" align="center" gutterBottom>
+          KashTracker
+        </Typography>
+        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+          By accessing and using this page you agree to the Terms and Conditions.
+        </Typography>
+        <Copyright />
+      </footer>
     </Container>
   );
 }

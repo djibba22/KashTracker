@@ -2,10 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import Markdown from './Markdown';
+import {Grid,Typography,Container} from '@material-ui/core';
+
 
 const useStyles = makeStyles((theme) => ({
   markdown: {
@@ -18,17 +16,14 @@ export default function Main(props) {
   const classes = useStyles();
   const { posts, title } = props;
   return (
-    <Grid item xs={12} md={8}>
-      <Typography variant="h6" gutterBottom>
-        {title}
+    <div className={classes.heroContent}>
+    <Container maxWidth="sm">
+      <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+        Kash Tracker
       </Typography>
-      <Divider />
-      {posts.map((post) => (
-        <Markdown className={classes.markdown} key={post.substring(0, 40)}>
-          {post}
-        </Markdown>
-      ))}
-    </Grid>
+      <Grid container spacing={2} justify="center"></Grid>
+    </Container>
+  </div>
   );
 }
 
