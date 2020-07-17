@@ -24,6 +24,10 @@
   },
   "homepage": "https://github.com/djibba22/KashTracker#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "fontsource-roboto": "^2.1.4",
+    "markdown-to-jsx": "^6.11.4",
     "react-router-dom": "^5.2.0"
   }
 }
