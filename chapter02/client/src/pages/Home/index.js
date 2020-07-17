@@ -54,16 +54,10 @@ function Home() {
   const classes = useStyles();
  
   const sections = [
-    { title: 'Technology', url: '#' },
-    { title: 'Design', url: '#' },
+    { title: 'How It Works', url: '#' },
+    { title: 'Resources', url: '#' },
     { title: 'Culture', url: '#' },
-    { title: 'Business', url: '#' },
-    { title: 'Politics', url: '#' },
-    { title: 'Opinion', url: '#' },
-    { title: 'Science', url: '#' },
-    { title: 'Health', url: '#' },
-    { title: 'Style', url: '#' },
-    { title: 'Travel', url: '#' },
+    { title: 'Business', url: '#' }
   ]
 
   const mainFeaturedPost = {
